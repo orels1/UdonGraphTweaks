@@ -179,7 +179,9 @@ namespace UGT {
       var ugtStyles = AssetDatabase.LoadAssetAtPath<StyleSheet>(
         "Assets/Editor/UGT/UdonGraphTweaks_GraphTheme.uss");
       var graphThemeToggle = GetWindow<UdonGraphTweaks>().rootVisualElement.Q<Toggle>("UGTGraphTheme");
+      graphThemeToggle.value = EditorPrefs.GetBool("UGT/UseUGTTheme", false);
       graphThemeToggle.RegisterValueChangedCallback(evt => {
+        EditorPrefs.SetBool("UGT/UseUGTTheme", evt.newValue);
         if (evt.newValue) {
           if (!w.rootVisualElement.styleSheets.Contains(ugtStyles)) {
             w.rootVisualElement.styleSheets.Add(ugtStyles);
@@ -984,7 +986,8 @@ namespace UGT {
       };
       searchContainer.Add(closeButton);
       root.Add(searchContainer);
-      searchTextField.Q<TextInputBaseField<string>>().Focus();
+      window.Focus();
+      searchTextField.Focus();
     }
 
     public static void PerformSearch(UdonGraphData data, UdonGraph view, string term) {
