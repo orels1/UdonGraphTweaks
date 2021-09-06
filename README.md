@@ -1,7 +1,7 @@
-﻿<p align="center">
-    <h1>🔧 Udon Graph Tweaks 🔧</h1>
-</p>
-<hr>
+﻿<h1 align="center">
+    🔧 Udon Graph Tweaks 🔧
+</h1>
+
 <p align="center">
   <strong>Hotkeys, Shortcuts and other improvements to Udon Graph Workflow</strong>
 </p>
