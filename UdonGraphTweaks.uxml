@@ -1,0 +1,58 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:ScrollView show-horizontal-scroller="false" mode="Vertical" show-vertical-scroller="false" style="height: 100%;">
+        <ui:VisualElement class="container col" style="height: 100%; justify-content: space-between; flex-basis: auto; flex-grow: 1;">
+            <ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Label text="Events" style="padding-left: 4px;" />
+                    <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                        <ui:Button text="Start" name="EventStart" style="flex-basis: 1px; flex-shrink: 1; flex-grow: 1;" />
+                        <ui:Button text="Update" name="EventUpdate" style="flex-basis: 1px; flex-shrink: 1; flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:Button text="PostLateUpdate" name="EventPostLateUpdate" />
+                    <ui:Button text="Interact" name="EventInteract" tooltip="i + Left Click" />
+                    <ui:VisualElement style="flex-direction: row;">
+                        <ui:Button text="Player Enter" name="EventPlayerTriggerEnter" style="flex-grow: 1; flex-shrink: 1; flex-basis: 1px;" />
+                        <ui:Button text="Player Exit" name="EventPlayerTriggerExit" style="flex-grow: 1; flex-shrink: 1; flex-basis: 1px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row;">
+                        <ui:Button text="Trigger Enter" name="EventTriggerEnter" style="flex-grow: 1; flex-basis: 1px; flex-shrink: 1;" />
+                        <ui:Button text="Trigger Exit" name="EventTriggerExit" style="flex-grow: 1; flex-basis: 1px; flex-shrink: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row;">
+                        <ui:Button text="Pickup" name="EventPickup" style="flex-grow: 1; flex-shrink: 1; flex-basis: 1px;" />
+                        <ui:Button text="Drop" name="EventDrop" style="flex-grow: 1; flex-basis: 1px; flex-shrink: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Label text="Constants" style="padding-left: 4px;" />
+                    <ui:Button text="String" name="ConstString" tooltip="S + Left Click" />
+                    <ui:VisualElement style="flex-direction: row;">
+                        <ui:Button text="Int" name="ConstInt" tooltip="0 + LeftClick" style="flex-basis: 1px; flex-shrink: 1; flex-grow: 1;" />
+                        <ui:Button text="Float" name="ConstFloat" tooltip="1 + Left Click" style="flex-grow: 1; flex-basis: 1px; flex-shrink: 1;" />
+                    </ui:VisualElement>
+                    <ui:Button text="Bool" name="ConstBool" style="flex-grow: 1;" />
+                    <ui:VisualElement style="flex-direction: row;">
+                        <ui:Button text="Vector2" name="ConstVector2" tooltip="2 + Left Click" style="flex-grow: 1; margin-right: 2px;" />
+                        <ui:Button text="Vector3" name="ConstVector3" tooltip="3 + Left Click" style="flex-grow: 1; margin-left: 2px; margin-right: 2px;" />
+                        <ui:Button text="Vector4" name="ConstVector4" tooltip="4 + Left Click" style="flex-grow: 1; margin-left: 2px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="margin-top: 19px;">
+                    <ui:Label text="Extras" style="padding-left: 4px;" />
+                    <ui:Button text="Debug Log" name="ExtraDebug" tooltip="L + Left Click" />
+                    <ui:Button text="This GameObject" name="ExtraGameObject" />
+                    <ui:Button text="This Transform" name="ExtraTransform" />
+                    <ui:Button text="Loop Over Array" name="ExtraIterator" tooltip="Select an array node and click this" />
+                </ui:VisualElement>
+                <ui:VisualElement style="margin-top: 19px;">
+                    <ui:Label text="Hints" style="padding-left: 4px;" />
+                    <ui:Label text="Hover over buttons to see their shortcuts &#10;&#10;Use Ctrl+F to open Search&#10;Use L + LeftClick on any value node to Log it&#10;Use B + LeftClick on Vector nodes to break them out into components&#10;Use C + LeftClick on any Constant to convert it to a variable (Add Shift to make it public)" style="height: auto; padding-left: 4px; padding-right: 4px; margin-top: 2px; white-space: normal;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="margin-top: 11px;">
+                <ui:Label text="Options" style="padding-left: 4px;" />
+                <ui:Toggle label="UGT Graph Theme" view-data-key="ugtGraphTheme" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

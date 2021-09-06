@@ -1,0 +1,68 @@
+﻿.ugt GridBackground#bg {
+    --line-color:rgba(0,0,0,0.2);
+    --spacing: 25;
+    --grid-background-color: rgb(26, 26, 26);
+}
+
+.ugt UdonMinimap {
+    border-radius: 2px;
+}
+
+.ugt Toolbar#UdonToolbar {
+    background-color: #282828;
+    background-image: none;
+}
+
+.ugt Toolbar#UdonToolbar #assetName {
+    background-image: none;
+    background-color: #393939;
+}
+
+.ugt Toolbar#UdonToolbar ToolbarButton {
+    -unity-text-align: middle-left;
+}
+
+.ugt Toolbar#UdonToolbar VisualElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #393939;
+    padding: 1px 5px;
+}
+
+.ugt Toolbar#UdonToolbar #UpdateOrderIntegerField {
+    min-width: 80px;
+}
+
+.ugt Toolbar#UdonToolbar UdonGraphStatus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ugt Toolbar#UdonToolbar UdonGraphStatus #Content {
+    -unity-text-align: middle-center;
+    position: relative;
+    padding-top: 2px;
+}
+
+.ugt .blackboard#Parameters #content #header {
+    background-color: #171717;
+}
+
+.ugt .blackboard#Parameters #content #header #addButton {
+    background-image: none;
+    background-color: #575757;
+}
+
+.ugt UdonWelcomeView#udon-welcome {
+    margin-top: 20px;    
+}
+
+.ugt UdonWelcomeView#udon-welcome #column-2 Button {
+    background-color: #40676e;
+    -unity-font-style: bold;
+    padding: 5px 10px;
+    color: #fcfcfc;
+    background-image: none;
+}
