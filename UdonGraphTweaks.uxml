@@ -51,7 +51,7 @@
             </ui:VisualElement>
             <ui:VisualElement style="margin-top: 11px;">
                 <ui:Label text="Options" style="padding-left: 4px;" />
-                <ui:Toggle label="UGT Graph Theme" view-data-key="ugtGraphTheme" />
+                <ui:Toggle label="UGT Graph Theme" name="UGTGraphTheme" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:ScrollView>
