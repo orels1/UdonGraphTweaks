@@ -29,6 +29,10 @@
 - Dock it somewhere, e.g. besides your Udon Graph window
 - Enjoy!
 
+### Support
+
+#### Having questions? Issues? Found a bug? [Drop by my Discord server and I'll be glad to help!](https://discord.com/invite/fR869XP)
+
 ## Usage
 
 ### Hotkeys
