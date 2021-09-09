@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using JetBrains.Annotations;
+using Mono.Cecil;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.ShortcutManagement;
@@ -33,13 +34,10 @@ namespace UGT {
       keyPressed = false;
       lastPressedKey = KeyCode.None;
 
-      visualTree =
-        AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(
-          "Assets/Editor/UGT/UdonGraphTweaks.uxml");
+      visualTree = Resources.Load<VisualTreeAsset>("UdonGraphTweaks");
       var ui = visualTree.CloneTree((string)null);
       window.rootVisualElement.styleSheets.Add(
-        AssetDatabase.LoadAssetAtPath<StyleSheet>(
-          "Assets/Editor/UGT/UdonGraphTweaks.uss"));
+        Resources.Load<StyleSheet>("UdonGraphTweaks"));
       BindClicks(ui);
       var delayedBind = rootVisualElement.schedule.Execute(() => {
         BindGraphCallbacks(window.rootVisualElement);
@@ -176,8 +174,7 @@ namespace UGT {
       checkWindowChange.Every(1000);
       checkWindowChange.StartingIn(1000);
 
-      var ugtStyles = AssetDatabase.LoadAssetAtPath<StyleSheet>(
-        "Assets/Editor/UGT/UdonGraphTweaks_GraphTheme.uss");
+      var ugtStyles = Resources.Load<StyleSheet>("UdonGraphTweaks_GraphTheme");
       var graphThemeToggle = GetWindow<UdonGraphTweaks>().rootVisualElement.Q<Toggle>("UGTGraphTheme");
       graphThemeToggle.value = EditorPrefs.GetBool("UGT/UseUGTTheme", false);
       graphThemeToggle.RegisterValueChangedCallback(evt => {
@@ -217,9 +214,7 @@ namespace UGT {
       var w = GetWindow(typeof(UdonGraphTweaks));
       var root = w.rootVisualElement;
       root.Clear();
-      visualTree =
-        AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(
-          "Assets/Editor/UGT/UdonGraphTweaks.uxml");
+      visualTree = Resources.Load<VisualTreeAsset>("UdonGraphTweaks");
       visualTree.CloneTree(root);
     }
     
@@ -937,9 +932,8 @@ namespace UGT {
       var data = graph.GetGraphData();
 
       var root = window.rootVisualElement;
-      
-      var ugtStyles = AssetDatabase.LoadAssetAtPath<StyleSheet>(
-        "Assets/Editor/UGT/UdonGraphTweaks_Search.uss");
+
+      var ugtStyles = Resources.Load<StyleSheet>("UdonGraphTweaks_Search");
       if (!root.styleSheets.Contains(ugtStyles)) {
         root.styleSheets.Add(ugtStyles);
       }

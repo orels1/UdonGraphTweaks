@@ -26,10 +26,16 @@
 ### Installation
 
 - [Download the repo](https://github.com/orels1/UdonGraphTweaks/archive/refs/heads/master.zip)
-- Extract into the `Editor` folder inside your `Assets`
+- Delete the old version of the UGT if you have one
+- Extract into the `Editor/UGT` folder inside your `Assets`
 - Open the UGT window: Top Unity Menu -> Tools -> UdonGraphTweaks 
 - Dock it somewhere, e.g. besides your Udon Graph window
 - Enjoy!
+
+### Updating
+
+- Delete the installed version of the UGT
+- Extract into the `Editor/UGT` folder inside your `Assets`
 
 ### Support
 
