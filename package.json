@@ -1,0 +1,17 @@
+﻿{
+  "name": "sh.orels.udongraphtweaks",
+  "version": "1.0.1",
+  "description": "Hotkeys, Shortcuts and other improvements to Udon Graph Workflow",
+  "displayName": "UdonGraphTweaks",
+  "unity": "2019.4",
+  "author": {
+    "name": "orels1",
+    "email": "ping@orels.sh",
+    "url": "https://orels.sh"
+  },
+  "documentationUrl": "https://github.com/orels1/UdonGraphTweaks",
+  "hideInEditor": "false",
+  "keywords": ["udon", "editor scripts", "ui", "graph"],
+  "license": "MIT",
+  "licensesUrl": "https://github.com/orels1/UdonGraphTweaks/blob/master/LICENSE"
+}
